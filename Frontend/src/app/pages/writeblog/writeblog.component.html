@@ -1,0 +1,52 @@
+<app-navbar></app-navbar>
+<div id="writeblog-container">
+  <div id="head"></div>
+  <div id="form">
+    <form #blogform="ngForm" (ngSubmit)="submitBlog(blogform.value)">
+      <div id="title-container">
+        <div id="title">
+          <!-- Title Field -->
+          <label for="title">Title</label>
+          <input pInputText type="text" name="title" id="title" ngModel required />
+
+          <!-- Image Link Field -->
+          <label for="imagelink">Image Link</label>
+          <input pInputText type="text" name="imagelink" id="imageLink" ngModel />
+
+          <!-- Category Field -->
+          <label for="category">Category</label>
+          <p-multiSelect
+            [options]="categories"
+            optionLabel="name"
+            name="category"
+            id="category"
+            placeholder="Select category"
+            [(ngModel)]="category"
+          ></p-multiSelect>
+        </div>
+
+        <!-- Submit Button -->
+        <div>
+          <button type="submit" [disabled]="blogform.invalid">
+            <i class="pi pi-send" style="color: rgb(7, 7, 7)"> Post</i>
+          </button>
+        </div>
+      </div>
+
+      <div id="content">
+        <!-- Content Field -->
+        <label for="content">Content</label><br />
+        <textarea
+          rows="16"
+          cols="110"
+          id="content"
+          pInputTextarea
+          [autoResize]="true"
+          name="content"
+          ngModel
+          required
+        ></textarea>
+      </div>
+    </form>
+  </div>
+</div>

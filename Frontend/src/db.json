@@ -1,0 +1,182 @@
+{
+    "blogs": [
+      {
+        "id": 1,
+        "title": "The Joy of Coding",
+        "description": "A deep dive into the passion and excitement that coding brings.",
+        "date": "2024-11-01T10:00:00Z",
+        "author": "John Doe"
+      },
+      {
+        "id": 2,
+        "title": "Understanding Angular Directives",
+        "description": "A comprehensive guide on how to use Angular directives effectively.",
+        "date": "2024-11-02T14:30:00Z",
+        "author": "Jane Smith"
+      },
+      {
+        "id": 3,
+        "title": "Mastering JavaScript",
+        "description": "Learn the fundamentals and advanced topics in JavaScript.",
+        "date": "2024-10-25T09:00:00Z",
+        "author": "Alice Johnson"
+      },
+      {
+        "id": 4,
+        "title": "Exploring TypeScript",
+        "description": "An introduction to TypeScript and its benefits.",
+        "date": "2024-11-10T15:00:00Z",
+        "author": "Michael Lee"
+      },
+      {
+        "id": 5,
+        "title": "Building Scalable Web Apps with React",
+        "description": "Learn the best practices for building scalable web applications with React.",
+        "date": "2024-11-05T12:00:00Z",
+        "author": "Emma Davis"
+      },
+      {
+        "id": 6,
+        "title": "Why Python is Great for Beginners",
+        "description": "A beginner-friendly guide to learning Python, one of the most versatile languages.",
+        "date": "2024-09-30T08:45:00Z",
+        "author": "Olivia White"
+      },
+      {
+        "id": 7,
+        "title": "How to Use Git Effectively",
+        "description": "A simple guide to mastering Git and GitHub for version control and collaboration.",
+        "date": "2024-11-12T17:00:00Z",
+        "author": "James Brown"
+      },
+      {
+        "id": 8,
+        "title": "Introduction to Cloud Computing",
+        "description": "An introduction to cloud computing concepts, technologies, and services.",
+        "date": "2024-10-18T11:30:00Z",
+        "author": "Sophia Wilson"
+      },
+      {
+        "id": 9,
+        "title": "The Future of Artificial Intelligence",
+        "description": "An exploration of the future potential and applications of AI in various industries.",
+        "date": "2024-10-20T13:00:00Z",
+        "author": "Liam Miller"
+      },
+      {
+        "id": 10,
+        "title": "How to Become a Full Stack Developer",
+        "description": "The path to becoming a full-stack developer, from front-end to back-end technologies.",
+        "date": "2024-10-15T16:00:00Z",
+        "author": "Isabella Moore"
+      }
+    ],
+    
+      "magazines": [
+        {
+          "id": 1,
+          "title": "National Geographic",
+          "description": "A world-renowned magazine focusing on geography, history, and world culture.",
+          "image_link": "https://upload.wikimedia.org/wikipedia/commons/a/a7/National_Geographic_logo_2018.svg"
+        },
+        {
+          "id": 2,
+          "title": "TIME",
+          "description": "A leading news magazine known for its coverage of global events and in-depth analysis.",
+          "image_link": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Time_logo_2013.svg"
+        },
+        {
+          "id": 3,
+          "title": "Vogue",
+          "description": "A premier fashion and lifestyle magazine that sets trends in the fashion industry.",
+          "image_link": "https://upload.wikimedia.org/wikipedia/commons/1/18/Vogue_Logo_2010.png"
+        },
+        {
+          "id": 4,
+          "title": "Forbes",
+          "description": "A business and finance magazine known for its rankings of billionaires and analysis of economic trends.",
+          "image_link": "https://upload.wikimedia.org/wikipedia/commons/1/17/Forbes_Logo_2018.svg"
+        },
+        {
+          "id": 5,
+          "title": "Scientific American",
+          "description": "A magazine that covers a wide range of scientific topics, from space to biology and technology.",
+          "image_link": "https://upload.wikimedia.org/wikipedia/commons/6/68/Scientific_American_logo.svg"
+        },
+        {
+          "id": 6,
+          "title": "The Economist",
+          "description": "A global publication focused on economic, political, and social issues worldwide.",
+          "image_link": "https://upload.wikimedia.org/wikipedia/commons/c/c7/The_Economist_logo.svg"
+        },
+        {
+          "id": 7,
+          "title": "Cosmopolitan",
+          "description": "A women's magazine covering a variety of topics, including relationships, health, and career advice.",
+          "image_link": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Cosmopolitan_logo_2019.svg"
+        },
+        {
+          "id": 8,
+          "title": "Wired",
+          "description": "A magazine focused on technology, innovation, and the impact of the digital age on culture and business.",
+          "image_link": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Wired_logo_2017.svg"
+        },
+        {
+          "id": 9,
+          "title": "Rolling Stone",
+          "description": "A magazine focused on music, pop culture, politics, and social issues.",
+          "image_link": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Rolling_Stone_logo_2019.svg"
+        },
+        {
+          "id": 10,
+          "title": "Architectural Digest",
+          "description": "A magazine dedicated to architecture, interior design, and fine living.",
+          "image_link": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Architectural_Digest_logo.svg"
+        },
+        {
+          "id": 11,
+          "title": "People",
+          "description": "A celebrity gossip and lifestyle magazine known for its exclusive interviews and photos.",
+          "image_link": "https://upload.wikimedia.org/wikipedia/commons/a/a1/People_logo.svg"
+        },
+        {
+          "id": 12,
+          "title": "Elle",
+          "description": "A fashion and beauty magazine, also covering topics like relationships, health, and entertainment.",
+          "image_link": "https://upload.wikimedia.org/wikipedia/commons/1/12/Elle_logo.svg"
+        },
+        {
+          "id": 13,
+          "title": "Harper's Bazaar",
+          "description": "A fashion magazine with a focus on high-end style, beauty, and celebrity news.",
+          "image_link": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Harper%27s_Bazaar_logo.svg"
+        },
+        {
+          "id": 14,
+          "title": "Sports Illustrated",
+          "description": "A sports magazine known for its coverage of major sports events, athletes, and the famous swimsuit issue.",
+          "image_link": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Sports_Illustrated_logo.svg"
+        },
+        {
+          "id": 15,
+          "title": "New Yorker",
+          "description": "A prestigious magazine known for its editorial commentary, cartoons, and coverage of cultural and social issues.",
+          "image_link": "https://upload.wikimedia.org/wikipedia/commons/0/0f/The_New_Yorker_logo.svg"
+        }
+      ],
+      "Users":[
+        {
+          "id":1,
+          "Name":"John Doe",
+          "Reg_No":"PRNTH0001",
+          "Dob":"10/08/2002"
+        },
+        {},
+        {
+        }
+
+      ]
+    
+    
+  }
+  

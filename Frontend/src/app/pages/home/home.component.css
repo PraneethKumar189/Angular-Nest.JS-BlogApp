@@ -1,0 +1,57 @@
+section{
+    margin-top: 0px;
+     width: 100vw;
+     height: 60vw;
+     display: flex;
+     flex-direction: row;
+    
+ }
+ #pic {
+    
+     width: 50vw; /* This is correct if you want the width to be 50% of the viewport width */
+     height: 60vw; /* Set a height to ensure the image covers the area properly. You can adjust this as per your need */
+    display: flex;
+    justify-content: flex-end;
+    
+ }
+ img{
+     height:  40vw;
+     margin-right: 0px;
+ }
+ 
+ #hero{
+     width:50vw ;
+     height: 60vw;
+     padding-top: 70px;
+ }
+ #hero h1{
+     font-family: gt-super, Georgia, Cambria, "Times New Roman", Times, serif;
+ 
+     color: rgb(53, 52, 52);
+     font-size: 90px;
+     margin-left: 60px;
+     font-weight: lighter;
+ }
+ #hero p{
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     font-stretch: expanded;
+     margin-left: 60px;
+     margin-top: 20px;
+     font-size: 26px;
+ }
+ #hero button{
+     height: 40px;
+     width: 120px;
+     margin-top: 50px;
+     background-color:rgb(13, 228, 120);
+     color: rgb(15, 15, 15);
+     margin-left: 60px;
+     border-radius: 40px;
+ }
+ #hero a{
+     text-decoration: none;
+     color: black;
+ }
+ #hero button:hover{
+     background-color:rgb(4, 255, 130)
+ }
