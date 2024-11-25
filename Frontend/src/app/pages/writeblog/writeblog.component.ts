@@ -4,7 +4,7 @@ import { MultiSelectModule } from 'primeng/multiselect';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { InputTextModule } from 'primeng/inputtext';
 import { FormsModule, NgModel } from '@angular/forms';
-
+import { EditorModule } from 'primeng/editor';
 interface Category {
   name: string,
   code: string
@@ -12,42 +12,18 @@ interface Category {
 @Component({
   selector: 'app-writeblog',
   standalone: true,
-  imports: [NavBarComponent,MultiSelectModule,InputTextareaModule,InputTextModule,FormsModule],
+  imports: [NavBarComponent,MultiSelectModule,InputTextareaModule,InputTextModule,FormsModule,EditorModule],
   templateUrl: './writeblog.component.html',
   styleUrl: './writeblog.component.css'
 })
 
-export class WriteblogComponent implements OnInit {
-  categories!:Category[];
-  title:string='';
-  imageLink:string='';
-  category:any;
-  content:string='';
-  ngOnInit(): void {
-    this.categories=[
-      {
-        name:'Science',
-        code:'SC'
-      },
-      {
-        name:'Travel',
-        code:'TL'
-      },
-      {
-        name:'Sports',
-        code:'SP'
-      },
-      {
-        name:'Literature',
-        code:'LT'
-      }
+export class WriteblogComponent  {
+
+text: string='';
 
 
-    ]
-  }
-
-  submitBlog(blogForm:any){
-    console.log(blogForm)
+  submitBlog(){
+    console.log(this.text)
 
   }
 
