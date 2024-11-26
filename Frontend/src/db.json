@@ -1,74 +1,13 @@
 {
     "blogs": [
       {
-        "id": 1,
-        "title": "The Joy of Coding",
-        "description": "A deep dive into the passion and excitement that coding brings.",
+        "id":1,
+        "title":"Architectural Digest",
+        "Name":"John",
+        "description":"description",
         "date": "2024-11-01T10:00:00Z",
-        "author": "John Doe"
-      },
-      {
-        "id": 2,
-        "title": "Understanding Angular Directives",
-        "description": "A comprehensive guide on how to use Angular directives effectively.",
-        "date": "2024-11-02T14:30:00Z",
-        "author": "Jane Smith"
-      },
-      {
-        "id": 3,
-        "title": "Mastering JavaScript",
-        "description": "Learn the fundamentals and advanced topics in JavaScript.",
-        "date": "2024-10-25T09:00:00Z",
-        "author": "Alice Johnson"
-      },
-      {
-        "id": 4,
-        "title": "Exploring TypeScript",
-        "description": "An introduction to TypeScript and its benefits.",
-        "date": "2024-11-10T15:00:00Z",
-        "author": "Michael Lee"
-      },
-      {
-        "id": 5,
-        "title": "Building Scalable Web Apps with React",
-        "description": "Learn the best practices for building scalable web applications with React.",
-        "date": "2024-11-05T12:00:00Z",
-        "author": "Emma Davis"
-      },
-      {
-        "id": 6,
-        "title": "Why Python is Great for Beginners",
-        "description": "A beginner-friendly guide to learning Python, one of the most versatile languages.",
-        "date": "2024-09-30T08:45:00Z",
-        "author": "Olivia White"
-      },
-      {
-        "id": 7,
-        "title": "How to Use Git Effectively",
-        "description": "A simple guide to mastering Git and GitHub for version control and collaboration.",
-        "date": "2024-11-12T17:00:00Z",
-        "author": "James Brown"
-      },
-      {
-        "id": 8,
-        "title": "Introduction to Cloud Computing",
-        "description": "An introduction to cloud computing concepts, technologies, and services.",
-        "date": "2024-10-18T11:30:00Z",
-        "author": "Sophia Wilson"
-      },
-      {
-        "id": 9,
-        "title": "The Future of Artificial Intelligence",
-        "description": "An exploration of the future potential and applications of AI in various industries.",
-        "date": "2024-10-20T13:00:00Z",
-        "author": "Liam Miller"
-      },
-      {
-        "id": 10,
-        "title": "How to Become a Full Stack Developer",
-        "description": "The path to becoming a full-stack developer, from front-end to back-end technologies.",
-        "date": "2024-10-15T16:00:00Z",
-        "author": "Isabella Moore"
+        "Reg_No":1,
+        "content":"<h1>Hi there</h1>"
       }
     ],
     
@@ -170,9 +109,6 @@
           "Name":"John Doe",
           "Reg_No":"PRNTH0001",
           "Dob":"10/08/2002"
-        },
-        {},
-        {
         }
 
       ]
