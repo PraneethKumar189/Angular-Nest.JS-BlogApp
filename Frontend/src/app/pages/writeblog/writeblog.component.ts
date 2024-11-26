@@ -5,10 +5,8 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { InputTextModule } from 'primeng/inputtext';
 import { FormsModule, NgModel } from '@angular/forms';
 import { EditorModule } from 'primeng/editor';
-interface Category {
-  name: string,
-  code: string
-}
+import { ApiserviceService } from '../../services/apiservice.service';
+
 @Component({
   selector: 'app-writeblog',
   standalone: true,
@@ -18,13 +16,13 @@ interface Category {
 })
 
 export class WriteblogComponent  {
-
+constructor(private api:ApiserviceService){}
 text: string='';
 
 
   submitBlog(){
     console.log(this.text)
-
+   this.api.postblog(this.text.toString())
   }
 
 
