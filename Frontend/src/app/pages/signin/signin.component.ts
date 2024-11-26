@@ -6,6 +6,7 @@ import { CalendarModule } from 'primeng/calendar';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button'
 import { Router,RouterOutlet } from '@angular/router';
+import { ApiserviceService } from '../../services/apiservice.service';
 @Component({
   selector: 'app-signin',
   standalone: true,
@@ -14,18 +15,23 @@ import { Router,RouterOutlet } from '@angular/router';
   styleUrl: './signin.component.css'
 })
 export class SigninComponent {
+ constructor(private apiservice:ApiserviceService,private router:Router){}
+
 showIcon:boolean=true;
 date:Date | undefined;
 center:string='center';
 name:string=''
 usn:string=''
 dob:Date|null=null;
-constructor(private router:Router){}
+Reg_num:null | undefined;
 
 submitForm(contactform:any){
-  console.log(contactform)
-  this.router.navigate(['/home'])
-  
+ this.usn=contactform.rno
+  //this.router.navigate(['/home'])
+  this.apiservice.getUserByID(this.usn).subscribe(data=>{
+    console.log(data.Reg_No)
+
+  })
 }
 
 

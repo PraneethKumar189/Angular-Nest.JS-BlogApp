@@ -46,3 +46,22 @@ h1 {
 #head{
     margin-top: 20px;
 }
+
+button{
+  height: 40px;
+  width: 120px;
+  margin-left: 20px;
+  background-color:rgb(13, 228, 120);
+  color: rgb(15, 15, 15);
+  
+  border-radius: 40px;
+}
+
+label{
+  margin-bottom: 10px;
+  position: relative;
+}
+input,#dob{
+  height: 30px;
+  padding-left: 15px;
+}
