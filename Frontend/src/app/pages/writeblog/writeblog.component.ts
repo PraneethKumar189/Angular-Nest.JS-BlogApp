@@ -23,7 +23,8 @@ import { ApiserviceService } from '../../services/apiservice.service';
 })
 export class WriteblogComponent {
   text: string = ''; 
-
+  image:any;
+  Desc:string='';
   constructor(private api: ApiserviceService) {}
 
   

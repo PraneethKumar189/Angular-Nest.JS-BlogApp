@@ -7,10 +7,10 @@ export class ApiserviceService {
 
   constructor(private http:HttpClient) { }
   getblog(){
-    return this.http.get('http://localhost:3000/blogs')
+    return this.http.get('http://localhost:3000/DummyBlog')
   }
   getblogbyid(id:any){
-    return this.http.get('http://localhost:3000/blogs/'+id)
+    return this.http.get('http://localhost:3000/DummyBlog/'+id)
   }
   private userurl='http://localhost:3000/Users'
   private magzurl='http://localhost:3000/magazines'

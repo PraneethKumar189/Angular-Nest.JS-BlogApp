@@ -21,6 +21,9 @@
 </div>
 
 <p-sidebar [(visible)]="sidebarVisible2" position="right">
-    <h3></h3>
+    <h3>{{name}}</h3>
+    <h4>{{reg_num}}</h4>
+    <button>My Blogs</button>
+    <button (click)="logout()">Sign Out</button>
 </p-sidebar>
 <router-outlet></router-outlet>
