@@ -9,6 +9,7 @@ import { Router,RouterOutlet } from '@angular/router';
 import { ApiserviceService } from '../../services/apiservice.service';
 import { User } from '../../Models/Users';
 import {find} from 'rxjs'
+import { consumerBeforeComputation } from '@angular/core/primitives/signals';
  @Component({
   selector: 'app-signin',
   standalone: true,
@@ -29,19 +30,21 @@ Reg_No:null | undefined;
 
 submitForm(contactform:any){
  this.usn=contactform.rno
+ console.log(contactform)
   this.router.navigate(['/home'])
   this.apiservice.getUserByID(this.usn).subscribe(res=>{
     console.log(res)
-    const user = res.find((a:any)=>{
-      return a.Reg_Blog === this.usn && a.Dob === contactform.date
-    }) 
-    if(user){
-      this.router.navigate(['home'])
-      console.log(user)
-    }
-    else{
-      window.alert("Incorrect password or user name")
-    }
+  if(res[0].Reg_No === contactform.rno && res[0].Name === contactform.username){
+    this.router.navigate(['home'])
+    console.log("password is correct")
+    sessionStorage.setItem('uid',this.usn)
+  }
+  else{
+    this.router.navigate([''])
+    console.log("password is incorrect") 
+    
+  }
+    
   })
 }
 
