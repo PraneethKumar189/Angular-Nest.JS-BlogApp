@@ -1,9 +1,11 @@
 <app-navbar></app-navbar>
 
 <div class="card">
-    <p-editor [(ngModel)]="text" [style]="{ height: '320px' }" />
 
+  <p-editor [(ngModel)]="text" [style]="{ height: '320px' }"></p-editor>
 </div>
-<button (click)="submitBlog()">submit</button>
 
 
+<div class="submit-button">
+  <button pButton type="button" label="Submit Blog" (click)="submitBlog()">Submit</button>
+</div>

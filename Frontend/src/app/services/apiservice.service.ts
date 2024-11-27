@@ -23,7 +23,8 @@ export class ApiserviceService {
   getUserByID(Rno:string){
     return this.http.get(this.userurl+'?Reg_No='+Rno)
   }
-  postblog(content:string){
-    return this.http.post('http://localhost:3000/DummyBlog',content)
+  postblog(content:any){
+    return this.http.post('http://localhost:3000/DummyBlog',content,{
+      headers: { 'Content-Type': 'application/json' }})
   }
 }
