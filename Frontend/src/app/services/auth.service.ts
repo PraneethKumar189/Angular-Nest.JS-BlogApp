@@ -7,9 +7,9 @@ export class AuthService {
 
   constructor() { }
   isLoggedIn():boolean{
-    return sessionStorage.getItem('loggedIn') === '1';
+    return sessionStorage.getItem('loggedin') === '1';
   }
   logout():void{
-    sessionStorage.removeItem('loggedIn')
+    sessionStorage.removeItem('loggedin')
   }
 }
