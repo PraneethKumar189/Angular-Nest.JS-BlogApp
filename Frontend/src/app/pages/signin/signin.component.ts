@@ -35,9 +35,10 @@ submitForm(contactform:any){
   this.apiservice.getUserByID(this.usn).subscribe(res=>{
     console.log(res)
   if(res[0].Reg_No === contactform.rno && res[0].Name === contactform.username){
-    this.router.navigate(['home'])
+    this.router.navigate(['/home'])
     console.log("password is correct")
     sessionStorage.setItem('uid',this.usn)
+    sessionStorage.setItem('loggedin','1');
   }
   else{
     this.router.navigate([''])
