@@ -1,23 +1,19 @@
-import {Entity,Column,PrimaryGeneratedColumn} from 'typeorm'
-
+import {Entity,Column,PrimaryGeneratedColumn, OneToOne} from 'typeorm'
+import { Profile } from 'src/profile/entites/profile.entity';
 
 @Entity()
 export class User {
-    @PrimaryGeneratedColumn()
-    id: number;
-  
-    @Column()
-    name: string;
+
+  @PrimaryGeneratedColumn()
+  id:number;
+   
   
     @Column({ unique: true })
     email: string;
   
     @Column()
-    dob: string; // Date of birth as password (hashed)
+    password: string; // Date of birth as password (hashed)
   
-    @Column({ nullable: true })
-    profileImageUrl: string; // Profile picture URL
-  
-    @Column({ default: 'user' }) // Default role is 'user'
-    role: string; // e.g., 'user', 'admin', etc.
+     @OneToOne(()=>Profile,(profile)=>profile.email)
+     profile:Profile[]
 }

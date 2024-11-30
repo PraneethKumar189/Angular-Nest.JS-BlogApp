@@ -1,3 +1,4 @@
+import { Profile } from 'src/profile/entites/profile.entity';
 import { User } from 'src/users/entities/users.entity';
 import{Entity,Column,PrimaryGeneratedColumn, ManyToOne} from 'typeorm'
 
@@ -10,8 +11,11 @@ export class Blog{
     title:string;
 
     @Column()
-    content:string;
+    image:string;
 
-    @ManyToOne(() => User, (user) => user.id)
-    author: User;
+    @Column()
+    blog:string;
+
+   @ManyToOne(()=>Profile,(profile)=>profile.regno)
+   profiles:Profile[]
 }
