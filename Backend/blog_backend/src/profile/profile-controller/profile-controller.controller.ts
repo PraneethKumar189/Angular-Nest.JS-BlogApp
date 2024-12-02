@@ -1,4 +1,4 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { CreateProfileDTO } from '../dto/createprofile.dto';
 import { ProfileServiceService } from '../profile-service/profile-service.service';
 
@@ -10,5 +10,15 @@ export class ProfileControllerController {
         const data= await this.profileservice.createProfile({...dto})
         return data
     }
+  
+    @Get()
+    async getMany(){
+        return this.profileservice.getMany()
+    }
 
+    @Get(':id')
+    async GetOne(@Param('id') id:number){
+      const data=await this.profileservice.getOne(id)
+      return {data}
+    }
 }
