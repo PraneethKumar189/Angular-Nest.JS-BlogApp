@@ -3,13 +3,16 @@ import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 @Entity()
 export class Profile{
     @PrimaryGeneratedColumn()
-    id:number
+    profileid:number
 
     @Column({nullable:false})
     name:string
 
     @Column({unique :true})
     regno:string
+
+    @Column({nullable:false})
+    password:string
 
     @Column({nullable:false})
     branch:string
