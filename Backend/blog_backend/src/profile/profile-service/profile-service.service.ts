@@ -29,7 +29,7 @@ export class ProfileServiceService {
     async createProfile(dto:CreateProfileDTO){
       const ProfileExist= await this.profileRepo.findOne({ where: { regno: dto.regno } });
       if (ProfileExist)
-        throw new BadRequestException('User already registered with email');
+        throw new BadRequestException('User already registered with regester number');
    
       const newProfile = this.profileRepo.create(dto)
       const Profile = this.profileRepo.save(newProfile)
