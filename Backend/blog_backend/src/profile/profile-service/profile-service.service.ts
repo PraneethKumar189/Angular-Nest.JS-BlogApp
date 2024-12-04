@@ -15,8 +15,8 @@ export class ProfileServiceService {
      }
 
 
-     async getOne(id:number,userEntity?:Profile){
-        const user = await this.profileRepo.findOne({ where: { profileid: id } }).then(u => (!userEntity ? u : !!u && userEntity.profileid=== u.profileid ? u : null));
+     async getOne(id:string,userEntity?:Profile){
+        const user = await this.profileRepo.findOne({ where: { regno: id } }).then(u => (!userEntity ? u : !!u && userEntity.profileid=== u.profileid ? u : null));
   
       if (!user)
         throw new NotFoundException('User does not exists or unauthorized');
@@ -38,7 +38,7 @@ export class ProfileServiceService {
     }
 
 
-    async editOne(id:number,dto:UpdateProfileDTO,userEntity?:Profile){
+    async editOne(id:string,dto:UpdateProfileDTO,userEntity?:Profile){
         console.log(dto);
         const user = await this.getOne(id, userEntity);
         const editedUser = Object.assign(user, dto);
@@ -46,7 +46,7 @@ export class ProfileServiceService {
     
 
     }
-    async deleteOne(id: number, userEntity?: Profile) {
+    async deleteOne(id: string, userEntity?: Profile) {
         const user = await this.getOne(id, userEntity);
         return await this.profileRepo.remove(user);
       }

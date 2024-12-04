@@ -31,10 +31,10 @@ Reg_No:null | undefined;
 submitForm(contactform:any){
  this.usn=contactform.rno
  console.log(contactform)
-  this.router.navigate(['/home'])
+  
   this.apiservice.getUserByID(this.usn).subscribe(res=>{
     console.log(res)
-  if(res[0].Reg_No === contactform.rno && res[0].Name === contactform.username){
+  if(res[0].regno === contactform.rno && res[0].name === contactform.username){
     this.router.navigate(['/home'])
     console.log("password is correct")
     sessionStorage.setItem('uid',this.usn)

@@ -8,7 +8,7 @@ import { FullblogComponent } from '../fullblog/fullblog.component';
 @Component({
   selector: 'app-blog',
   standalone: true,
-  imports: [NavBarComponent,NgFor,DatePipe],
+  imports: [NavBarComponent,NgFor],
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.css']
 })
@@ -20,6 +20,7 @@ ngOnInit(): void {
   {
     console.log(data);
     this.data1=data;
+    console.log(this.data1)
   }
   )
 }

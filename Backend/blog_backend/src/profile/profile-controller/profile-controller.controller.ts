@@ -20,20 +20,20 @@ export class ProfileControllerController {
     }
 
     @Get(':id')
-    async GetOne(@Param('id') id:number){
+    async GetOne(@Param('id') id:string){
       const data=await this.profileservice.getOne(id)
       return {data}
     }
 
     @Put(':id')
-    async updateOne(@Param('id') id:number,@Body() dto:UpdateProfileDTO){
+    async updateOne(@Param('id') id:string,@Body() dto:UpdateProfileDTO){
         
         const data=await this.profileservice.editOne(id,dto);
         return {messege:"User edited",data}
     }
 
     @Delete(':id')
-    async deleteOne(@Param('id') id:number){
+    async deleteOne(@Param('id') id:string){
         const data=await this.profileservice.deleteOne(id);
         return {message:"User Deleted",data}
     }
