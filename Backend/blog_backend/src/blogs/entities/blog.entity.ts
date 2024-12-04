@@ -7,13 +7,13 @@ export class Blog{
     @PrimaryGeneratedColumn()
     Blog_id:number;
 
-    @Column()
+    @Column({ type: 'varchar', length: 255 })
     title:string;
 
-    @Column()
+    @Column({ type: 'text'})
     image:string;
 
-    @Column()
+    @Column({ type: 'text' })
     blog:string;
 
     @ManyToOne(() => Profile, (profile) => profile.blogs)

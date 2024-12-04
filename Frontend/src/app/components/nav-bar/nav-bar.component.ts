@@ -19,12 +19,15 @@ sidebarVisible2:boolean=false;
 userId:any;
 name:string='';
 reg_num:string='';
+branch:string=''
 ngOnInit(): void {
   this.userId =sessionStorage.getItem('uid')
   this.api.getUserByID(this.userId).subscribe((data:any)=>{
       console.log(data)
-      this.name=data[0].Name;
-      this.reg_num=data[0].Reg_No;
+      this.name=data[0].name;
+      this.reg_num=data[0].regno;
+      this.branch=data[0].branch;
+      
     }
   )
 

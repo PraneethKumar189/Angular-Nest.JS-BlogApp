@@ -1,21 +1,22 @@
-<app-navbar></app-navbar>
-<div class="card">
+<div>
+  <app-navbar></app-navbar>
+  <h2>Write a Blog</h2>
 
-  <p-editor [(ngModel)]="image" [style]="{ height: '320px' }"></p-editor>
-</div>
-<hr>
-<div class="card">
+  <!-- Blog Editor -->
+  <p-editor class="editor" [(ngModel)]="text" name="text"></p-editor>
 
-  <p-editor [(ngModel)]="Desc" [style]="{ height: '320px' }"></p-editor>
-</div>
-<hr>
-<div class="card">
+  <!-- Submit Button -->
+  <button (click)="submitBlog()">Submit Blog</button>
 
-  <p-editor [(ngModel)]="text" [style]="{ height: '320px' }"></p-editor>
-</div>
-<hr>
+  <hr />
 
-
-<div class="submit-button">
-  <button pButton type="button" label="Submit Blog" (click)="submitBlog()">Submit</button>
+  <!-- Preview Extracted Data -->
+  <div *ngIf="extractedTitle || extractedImage">
+    <h3>Preview</h3>
+    <h4>Title: {{ extractedTitle }}</h4>
+    <div *ngIf="extractedImage">
+      <img [src]="extractedImage" alt="Blog Image" style="max-width: 100%;" />
+    </div>
+    <div [innerHTML]="text"></div>
+  </div>
 </div>

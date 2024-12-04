@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ApiserviceService {
+  
 
   constructor(private http:HttpClient) { }
   getblog(){
@@ -24,7 +25,8 @@ export class ApiserviceService {
     return this.http.get<any>(this.userurl+'?Reg_No='+Rno)
   }
   postblog(content:any){
-    return this.http.post('http://localhost:3000/DummyBlog',content,{
+    const id=sessionStorage.getItem('uid');
+    return this.http.post('http://localhost:3000/blog-controller/1',content,{
       headers: { 'Content-Type': 'application/json' }})
   }
 }
