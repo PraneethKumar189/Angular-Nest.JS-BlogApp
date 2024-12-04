@@ -16,6 +16,6 @@ export class Blog{
     @Column()
     blog:string;
 
-   @ManyToOne(()=>Profile,(profile)=>profile.regno)
-   profiles:Profile[]
+    @ManyToOne(() => Profile, (profile) => profile.blogs)
+    profile: Profile;
 }

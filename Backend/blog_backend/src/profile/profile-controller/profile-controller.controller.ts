@@ -3,7 +3,7 @@ import { CreateProfileDTO } from '../dto/createprofile.dto';
 import { ProfileServiceService } from '../profile-service/profile-service.service';
 import { UpdateProfileDTO } from '../dto/updateprofile.dto';
 import { Profile as ProfileEntity } from '../entites/profile.entity';
-import { User } from 'src/dec/dec.decorator';
+
 
 @Controller('profile-controller')
 export class ProfileControllerController {
@@ -26,7 +26,7 @@ export class ProfileControllerController {
     }
 
     @Put(':id')
-    async updateOne(@Param('id') id:number,@Body() dto:UpdateProfileDTO, @User() profile:ProfileEntity){
+    async updateOne(@Param('id') id:number,@Body() dto:UpdateProfileDTO){
         
         const data=await this.profileservice.editOne(id,dto);
         return {messege:"User edited",data}

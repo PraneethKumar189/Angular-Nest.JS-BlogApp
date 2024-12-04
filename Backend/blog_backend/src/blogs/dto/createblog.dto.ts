@@ -1,7 +1,7 @@
-
-import { IsString, IsNumber, IsNotEmpty, IsArray, ValidateNested } from 'class-validator';
+import { IsString, IsNotEmpty, ValidateNested } from 'class-validator';
 import { Type } from 'class-transformer';
 import { CreateProfileDTO } from 'src/profile/dto/createprofile.dto';
+
 export class CreateBlogDto {
   @IsNotEmpty()
   @IsString()
@@ -16,9 +16,7 @@ export class CreateBlogDto {
   blog: string;
 
   @IsNotEmpty()
-  @IsArray()
-  @ValidateNested({ each: true })
-@Type(() => CreateProfileDTO) 
-  profiles: CreateProfileDTO[];
+  @ValidateNested()
+  @Type(() => CreateProfileDTO)
+  profile: CreateProfileDTO; 
 }
-
