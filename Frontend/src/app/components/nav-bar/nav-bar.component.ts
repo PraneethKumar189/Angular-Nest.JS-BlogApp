@@ -19,11 +19,13 @@ sidebarVisible2:boolean=false;
 userId:any;
 name:string='';
 reg_num:string='';
-branch:string=''
+branch:string='';
+profid:number=0;
 ngOnInit(): void {
   this.userId =sessionStorage.getItem('uid')
   this.api.getUserByID(this.userId).subscribe((data:any)=>{
       console.log(data)
+      this.profid=data[0].profileid;
       this.name=data[0].name;
       this.reg_num=data[0].regno;
       this.branch=data[0].branch;
@@ -36,6 +38,10 @@ ngOnInit(): void {
 logout(){
   this.router.navigate([''])
   console.log("hello")
+}
+nav(profid1:number)
+{
+   this.router.navigate(['/manage',profid1])
 }
 
 }

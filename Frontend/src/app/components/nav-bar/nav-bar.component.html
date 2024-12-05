@@ -21,10 +21,14 @@
 </div>
 
 <p-sidebar [(visible)]="sidebarVisible2" position="right">
+  <div id="side">
     <h3>{{name}}</h3>
-    <h4>{{reg_num}}</h4>
-    <h4>{{branch}}</h4>
-    <button id="button">My Blogs</button>
-    <button id="button" (click)="logout()">Sign Out</button>
+    <h4>Reg.No :{{reg_num}}</h4>
+    <h4>Branch :{{branch}}</h4>
+  </div>  
+  <div id="side-button">
+    <button id="button" (click)="nav(profid)">My Blogs</button>
+    <button id="button" (click)="logout()">Sign Out-></button>
+  </div> 
 </p-sidebar>
 <router-outlet></router-outlet>

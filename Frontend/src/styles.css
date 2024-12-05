@@ -22,6 +22,7 @@
 .blog-content p {
   font-size: 16px;
   color: #333;
+  
 }
 .blog-content{
   margin-bottom: auto;
@@ -30,11 +31,21 @@
 .blog-content img {
   display: none;
 }
+.blog-content h1 {
+  display: none;
+}
 .full-blog-container #inner-container .blog-wrapper .blog-content1{
-  margin-left: 40%;
+  margin-left: 10%;
   margin-top: 5%;
+  margin-right: 10%;
 }
 .full-blog-container #inner-container .blog-wrapper .blog-content1 img{
-  width: 300px;
-  margin-top: 10px;
+  width: 500px;
+  margin-left:25%;
+  margin-bottom: 20px;
+}
+
+.full-blog-container #inner-container .blog-wrapper .blog-content1 h1{
+  display: none;
+  
 }

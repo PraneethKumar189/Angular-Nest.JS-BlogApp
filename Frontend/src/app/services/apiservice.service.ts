@@ -13,6 +13,9 @@ export class ApiserviceService {
   getblogbyid(id:any){
     return this.http.get('http://localhost:3000/blog-controller/'+id)
   }
+  getblogsbyid(id:any){
+    return this.http.get('http://localhost:3000/blog-controller/profile/'+id)
+  }
   private userurl='http://localhost:3000/profile-controller'
   private magzurl='http://localhost:3000/magazines'
   getMagzines(){

@@ -49,7 +49,29 @@
   background-color:rgb(13, 228, 120);
   color: rgb(15, 15, 15);
   border-radius: 40px;
+
 }
 #button:hover{
-  background-color:rgb(4, 255, 130)
+  background-color:rgb(4, 255, 130);
+
+}
+#side{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 45%;
+  margin-bottom: 40px;
+}
+#side h3{
+  margin-left: 40%;
+}
+#side h4{
+  margin-left: 25%;
+}
+#side-button{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
 }
