@@ -19,3 +19,14 @@
     margin: 0px;
     padding: 0px;
 }
+.blog-content p {
+  font-size: 16px;
+  color: #333;
+}
+.blog-content{
+  margin-bottom: auto;
+}
+
+.blog-content img {
+  display: none;
+}

@@ -1,12 +1,16 @@
 <app-navbar></app-navbar>
-<div id="blog-container" *ngIf="blog">
-  <h2>{{ blog.title }}</h2>
-  <p>Author: {{ blog.author }}</p>
-  <p>Published on: {{ blog.date | date: 'longDate' }}</p>
-  <br />
-  <hr />
+<div *ngIf="blog.data" >
+  <div id="inner-container">
+    <img id="image1" src="{{blog.data.image}}" alt="" srcset="">
+    <h2>{{ blog.data.title }}</h2>
 
-  <div [innerHTML]="decodedBlogContent"></div>
+ <div class="blog-wrapper">
+  <div  [innerHTML]="blog.data.blog"></div>
+
+ </div>
+   
+    
+  </div>
 </div>
 <hr />
 <router-outlet></router-outlet>

@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterOutlet } from '@angular/router';
 import { ApiserviceService } from '../../services/apiservice.service';
-import { DatePipe, NgIf } from '@angular/common';
+import { DatePipe, NgFor, NgIf } from '@angular/common';
 import { NavBarComponent } from '../../components/nav-bar/nav-bar.component';
 
 @Component({
   selector: 'app-fullblog',
   standalone: true,
-  imports: [RouterOutlet, NgIf, DatePipe, NavBarComponent],
+  imports: [RouterOutlet,  NavBarComponent,NgIf],
   templateUrl: './fullblog.component.html',
   styleUrls: ['./fullblog.component.css'] 
 })
 export class FullblogComponent implements OnInit {
-  blog: any; 
-  decodedBlogContent: string = ''; 
+  blog: any={}; 
+  title:any;
 
   constructor(private route: ActivatedRoute, private api: ApiserviceService) {}
 
@@ -30,8 +30,7 @@ export class FullblogComponent implements OnInit {
           this.blog = data;
 
           
-          this.decodedBlogContent = this.decodeHtmlEntities(data.content || '');
-          console.log('Decoded Blog Content:', this.decodedBlogContent);
+         
         },
         (error) => {
           console.error('Error fetching blog data:', error);
