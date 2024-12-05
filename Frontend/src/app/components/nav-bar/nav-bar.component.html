@@ -14,7 +14,7 @@
         <li><a routerLink="/write" routerLinkActive="active">Write</a></li>
         <li><a  routerLink="/magList" routerLinkActive="active">Magzines</a></li>
         
-        <li><p-button id="p-button" (onClick)="sidebarVisible2 = true" [text]="true"  label="Profile" /></li>
+        <li>  <a (click)="sidebarVisible2 = true">Profile</a></li>
       </ul>
     </nav>
   </div>
@@ -24,7 +24,7 @@
     <h3>{{name}}</h3>
     <h4>{{reg_num}}</h4>
     <h4>{{branch}}</h4>
-    <button>My Blogs</button>
-    <button (click)="logout()">Sign Out</button>
+    <button id="button">My Blogs</button>
+    <button id="button" (click)="logout()">Sign Out</button>
 </p-sidebar>
 <router-outlet></router-outlet>
