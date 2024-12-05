@@ -1,8 +1,7 @@
 <app-navbar></app-navbar>
 <div *ngIf="blog.data" >
   <div id="inner-container">
-    <img id="image1" src="{{blog.data.image}}" alt="" srcset="">
-    <h2>{{ blog.data.title }}</h2>
+
 
  <div class="blog-wrapper">
   <div  [innerHTML]="blog.data.blog"></div>
