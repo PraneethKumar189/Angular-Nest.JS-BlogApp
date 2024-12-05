@@ -10,14 +10,14 @@
 }
 #inner-container{
   border: 1px solid none;
-  box-shadow: rgba(32, 32, 32, 0.35) 0px 5px 15px;
+  box-shadow: rgba(165, 165, 165, 0.35) 0px 5px 15px;
   border-radius: 10px;
   margin: 10px;
   height: 50vh;
   width: 50vh;
   margin-bottom: 10px;
   padding: 20px;
-  transition: all 2s ease-in;
+  transition: box-shadow 1.5s  ;
 }
 #inner-container:hover{
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

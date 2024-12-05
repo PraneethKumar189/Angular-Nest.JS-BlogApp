@@ -30,3 +30,6 @@
 .blog-content img {
   display: none;
 }
+.full-blog-container #inner-container .blog-wrapper .blog-content1{
+  margin-left: 50%;
+}

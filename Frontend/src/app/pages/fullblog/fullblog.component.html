@@ -1,15 +1,18 @@
 <app-navbar></app-navbar>
-<div *ngIf="blog.data" >
-  <div id="inner-container">
-
-
- <div class="blog-wrapper">
-  <div  [innerHTML]="blog.data.blog"></div>
-
- </div>
-   
-    
+<div class="full-blog-container">
+  <div *ngIf="blog.data" >
+    <div id="inner-container">
+  
+  
+   <div class="blog-wrapper">
+    <div class="blog-content1" [innerHTML]="blog.data.blog"></div>
+  
+   </div>
+     
+      
+    </div>
   </div>
+  <hr />
 </div>
-<hr />
+
 <router-outlet></router-outlet>

@@ -2,10 +2,10 @@
   <app-navbar></app-navbar>
   <h2>Write a Blog</h2>
 
-  <!-- Blog Editor -->
-  <p-editor class="editor" [(ngModel)]="text" name="text"></p-editor>
+  
+  <p-editor id="editor" [(ngModel)]="text" name="text"></p-editor>
 
-  <!-- Submit Button -->
+  
   <button (click)="submitBlog()">Submit Blog</button>
 
   <hr />
