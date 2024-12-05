@@ -1,1 +1,11 @@
-<p>manage-blogs works!</p>
+<h1 align="center" style="margin: 20px;">Your Blogs</h1>
+<div id="mng-container">
+    <div id="blog-in" *ngFor="let blog of res?.blogs">
+        <h3>{{res.blogs[0].title}}</h3>
+        <div class="blog-wrapper">
+           <div class="blog-content" [innerHTML]="res.blogs[0].blog"></div>
+       
+          </div>
+       </div>
+       <button>Delete Blog</button>
+</div>
