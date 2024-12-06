@@ -10,13 +10,4 @@
 
   <hr />
 
-  <!-- Preview Extracted Data -->
-  <div *ngIf="extractedTitle || extractedImage">
-    <h3>Preview</h3>
-    <h4>Title: {{ extractedTitle }}</h4>
-    <div *ngIf="extractedImage">
-      <img [src]="extractedImage" alt="Blog Image" style="max-width: 100%;" />
-    </div>
-    <div [innerHTML]="text"></div>
-  </div>
 </div>

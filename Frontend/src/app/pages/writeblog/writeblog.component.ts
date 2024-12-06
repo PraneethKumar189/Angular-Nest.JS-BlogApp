@@ -19,7 +19,7 @@ import { MessageService } from 'primeng/api';
     InputTextModule,
     FormsModule,
     EditorModule,
-    NgIf,
+    
     ToastModule
 ],
   templateUrl: './writeblog.component.html',
