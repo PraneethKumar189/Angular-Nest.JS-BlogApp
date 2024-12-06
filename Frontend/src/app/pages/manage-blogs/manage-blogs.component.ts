@@ -24,4 +24,8 @@ export class ManageBlogsComponent implements OnInit {
     this.res=data;
    })
  }
+ deleteBlog(id1:number){
+  console.log(id1)
+  return this.api.deletePostById(id1)
+ }
 }

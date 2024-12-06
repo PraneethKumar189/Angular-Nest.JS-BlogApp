@@ -1,11 +1,12 @@
 <h1 align="center" style="margin: 20px;">Your Blogs</h1>
-<div id="mng-container">
-    <div id="blog-in" *ngFor="let blog of res?.blogs">
-        <h3>{{res.blogs[0].title}}</h3>
+<div id="mng-container" *ngFor="let blog of res?.blogs">
+    <div id="blog-in" >
+        <h3>{{blog.title}}</h3>
+
         <div class="blog-wrapper">
-           <div class="blog-content" [innerHTML]="res.blogs[0].blog"></div>
-       
+           <div class="blog-content" [innerHTML]="blog.blog"></div>
+           
           </div>
        </div>
-       <button>Delete Blog</button>
+       <button (click)="deleteBlog(blog.Blog_id)">Delete Blog</button>
 </div>

@@ -29,7 +29,11 @@ export class ApiserviceService {
   }
   postblog(content:any){
     const id=sessionStorage.getItem('uid');
-    return this.http.post('http://localhost:3000/blog-controller/1',content,{
+    return this.http.post('http://localhost:3000/blog-controller/'+id,content,{
       headers: { 'Content-Type': 'application/json' }})
+  }
+  deletePostById(id:number){
+    console.log(id)
+    return this.http.delete('http://localhost:3000/blog-controller/'+id)
   }
 }
