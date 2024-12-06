@@ -28,12 +28,15 @@ export class ApiserviceService {
     return this.http.get<any>(this.userurl+'?Reg_No='+Rno)
   }
   postblog(content:any){
-    const id=sessionStorage.getItem('uid');
+    const id=sessionStorage.getItem('pid');
     return this.http.post('http://localhost:3000/blog-controller/'+id,content,{
       headers: { 'Content-Type': 'application/json' }})
   }
   deletePostById(id:number){
     console.log(id)
-    return this.http.delete('http://localhost:3000/blog-controller/'+id)
+    return this.http.delete('http://localhost:3000/blog-controller/'+id).subscribe({
+      next: response => console.log(response),
+      error: err => console.error('Error:', err),
+    });
   }
 }

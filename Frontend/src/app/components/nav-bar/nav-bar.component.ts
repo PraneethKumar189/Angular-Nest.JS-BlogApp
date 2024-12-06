@@ -20,12 +20,13 @@ userId:any;
 name:string='';
 reg_num:string='';
 branch:string='';
-profid:number=0;
+profid:any=0;
 ngOnInit(): void {
   this.userId =sessionStorage.getItem('uid')
   this.api.getUserByID(this.userId).subscribe((data:any)=>{
       console.log(data)
       this.profid=data[0].profileid;
+      sessionStorage.setItem('pid',this.profid)
       this.name=data[0].name;
       this.reg_num=data[0].regno;
       this.branch=data[0].branch;
