@@ -10,6 +10,7 @@ import { MagzineReadComponent } from './pages/magzine-read/magzine-read.componen
 import { SigninComponent } from './pages/signin/signin.component';
 import { AuthGaurd } from './guard/authgaurd.guard';
 import { ManageBlogsComponent } from './pages/manage-blogs/manage-blogs.component';
+import { AdminComponent } from './admin/admin/admin.component';
 
 export const routes: Routes = [
     {path:'',redirectTo:'/signin', pathMatch:'full'},
@@ -20,4 +21,5 @@ export const routes: Routes = [
      {path:'write',component:WriteblogComponent,canActivate:[AuthGaurd]},
     {path:'magList',component:MagzineHomeComponent,canActivate:[AuthGaurd]},
 {path:'magRead',component:MagzineReadComponent,canActivate:[AuthGaurd]},
-{path:'manage/:profid1',component:ManageBlogsComponent,canActivate:[AuthGaurd]}];
+{path:'manage/:profid1',component:ManageBlogsComponent,canActivate:[AuthGaurd]},
+{path:'admin',component:AdminComponent,canActivate:[AuthGaurd]}];

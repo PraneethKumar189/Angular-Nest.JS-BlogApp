@@ -16,7 +16,7 @@ export class ApiserviceService {
   getblogsbyid(id:any){
     return this.http.get('http://localhost:3000/blog-controller/profile/'+id)
   }
-  private userurl='http://localhost:3000/profile-controller'
+  private userurl='http://localhost:3000/profile-controller/'
   private magzurl='http://localhost:3000/magazines'
   getMagzines(){
     return this.http.get(this.magzurl)
@@ -25,7 +25,7 @@ export class ApiserviceService {
     return this.http.get(this.magzurl+'?id='+val)
   }
   getUserByID(Rno:string){
-    return this.http.get<any>(this.userurl+'?Reg_No='+Rno)
+    return this.http.get<any>(this.userurl+Rno)
   }
   postblog(content:any){
     const id=sessionStorage.getItem('pid');

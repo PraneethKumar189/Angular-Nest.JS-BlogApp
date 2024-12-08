@@ -27,14 +27,17 @@ name:string=''
 usn:string=''
 dob:Date|null=null;
 Reg_No:null | undefined;
-
+password:string='';
 submitForm(contactform:any){
- this.usn=contactform.rno
+ 
  console.log(contactform)
-  
-  this.apiservice.getUserByID(this.usn).subscribe(res=>{
-    console.log(res)
-  if(res[0].regno === contactform.rno && res[0].name === contactform.username){
+ 
+  this.apiservice.getUserByID(contactform.regno).subscribe(res=>{
+    console.log(res.data.name)
+ if(contactform.regno==res.data.regno && contactform.password==res.data.password){
+  this.router.navigate(['/admin']);
+}
+ else if(res.data.password === contactform.password && res.data.regno === contactform.regno){
     this.router.navigate(['/home'])
     console.log("password is correct")
     sessionStorage.setItem('uid',this.usn)
