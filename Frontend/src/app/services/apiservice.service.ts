@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -24,9 +25,13 @@ export class ApiserviceService {
   getMagbyId(val:any){
     return this.http.get(this.magzurl+'?id='+val)
   }
-  getUserByID(Rno:string){
-    return this.http.get<any>(this.userurl+Rno)
-  }
+  getUserByID(Rno: string): Observable<any> {
+    console.log('Requesting user with ID:', Rno);
+    const res = this.http.get<any>('http://localhost:3000/profile-controller/' + Rno);
+    res.subscribe(data => console.log('Response:', data)); // Logs the actual response
+    return res;
+}
+
   postblog(content:any){
     const id=sessionStorage.getItem('pid');
     return this.http.post('http://localhost:3000/blog-controller/'+id,content,{

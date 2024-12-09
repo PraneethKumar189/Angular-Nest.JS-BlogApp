@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { routes } from '../../app.routes';
 
 @Component({
@@ -10,5 +10,10 @@ import { routes } from '../../app.routes';
   styleUrl: './admin.component.css'
 })
 export class AdminComponent {
+constructor(private router:Router){}
+logout(){
+  this.router.navigate([''])
+  console.log("hello")
+}
 
 }

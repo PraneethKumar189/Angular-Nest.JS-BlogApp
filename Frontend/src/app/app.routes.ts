@@ -17,8 +17,8 @@ import { DeleteUserComponent } from './admin/delete-user/delete-user.component';
 import { ManageblogsComponentAdmin } from './admin/manageblogs/manageblogsadmin.component';
 
 export const routes: Routes = [
- //  {path:'',redirectTo:'/signin', pathMatch:'full'},
-  {path:'',redirectTo:'/manageBlog',pathMatch:'full'},
+  {path:'',redirectTo:'/signin', pathMatch:'full'},
+ // {path:'',redirectTo:'/manageBlog',pathMatch:'full'},
    {path:'AddUser',component:AddUserComponent},
     {path:'signin',component:SigninComponent},
     {path:'home',component:HomeComponent,canActivate:[AuthGaurd]},

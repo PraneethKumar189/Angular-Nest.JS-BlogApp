@@ -33,11 +33,11 @@ submitForm(contactform:any){
  console.log(contactform)
  
   this.apiservice.getUserByID(contactform.regno).subscribe(res=>{
-    console.log(res.data.name)
- if(contactform.regno === res.data.regno && contactform.password===res.data.password){
-  this.router.navigate(['/admin']);
+    console.log(res.data)
+ if(contactform.regno === res.data.regno && contactform.password===res.data.password && res.data.role==='admin'){
+  this.router.navigate(['/adduser']);
 }
- else if(res.data.password === contactform.password && res.data.regno === contactform.regno){
+ else if(res.data.password === contactform.password && res.data.regno === contactform.regno && res.data.role==='student' ){
     this.router.navigate(['/home'])
     console.log("password is correct")
     sessionStorage.setItem('uid',this.usn)
