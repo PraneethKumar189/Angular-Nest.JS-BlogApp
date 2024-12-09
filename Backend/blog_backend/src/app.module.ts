@@ -11,7 +11,7 @@ import { BlogsModule } from './blogs/blogs.module';
     port: 5432,
     username: 'postgres',
     password: 'tatvamasi',
-    database: 'intern4',
+    database: 'intern7',
     entities: [__dirname + '/**/*.entity{.ts,.js}'],
     synchronize: true,
   }), ProfileModule,BlogsModule],

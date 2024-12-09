@@ -7,4 +7,5 @@ export class UpdateProfileDTO{
     sem:string;
     dob:Date;
     email:string;
+    role:string;
 }

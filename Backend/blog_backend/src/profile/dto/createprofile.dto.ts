@@ -32,4 +32,8 @@ export class CreateProfileDTO {
   @IsNotEmpty()
   @IsEmail()
   email: string;
+
+  @IsNotEmpty()
+  @IsString()
+  role:string;
 }

@@ -27,6 +27,8 @@ export class Profile{
     @Column({unique:true})
     email:string
    
+    @Column()
+    role:string;
     @OneToMany(() => Blog, (blog) => blog.profile)
     blogs: Blog[];
 }
