@@ -14,10 +14,11 @@ import { AdminComponent } from './admin/admin/admin.component';
 import { AddUserComponent } from './admin/add-user/add-user.component';
 import { UpdateUserComponent } from './admin/update-user/update-user.component';
 import { DeleteUserComponent } from './admin/delete-user/delete-user.component';
+import { ManageblogsComponentAdmin } from './admin/manageblogs/manageblogsadmin.component';
 
 export const routes: Routes = [
  //  {path:'',redirectTo:'/signin', pathMatch:'full'},
-  {path:'',redirectTo:'/AddUser',pathMatch:'full'},
+  {path:'',redirectTo:'/manageBlog',pathMatch:'full'},
    {path:'AddUser',component:AddUserComponent},
     {path:'signin',component:SigninComponent},
     {path:'home',component:HomeComponent,canActivate:[AuthGaurd]},
@@ -30,4 +31,5 @@ export const routes: Routes = [
 {path:'admin',component:AdminComponent,canActivate:[AuthGaurd]},
 {path:'adduser',component:AddUserComponent/*canActivate:[AuthGaurd] */},
 {path:'updateuser',component:UpdateUserComponent/*,canActivate:[AuthGaurd]*/},
-{path:'deleteUser',component:DeleteUserComponent}];
+{path:'deleteUser',component:DeleteUserComponent},
+{path:'manageBlog',component:ManageblogsComponentAdmin}];
