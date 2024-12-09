@@ -23,13 +23,13 @@ branch:string='';
 profid:any=0;
 ngOnInit(): void {
   this.userId =sessionStorage.getItem('uid')
-  this.api.getUserByID(this.userId).subscribe((data:any)=>{
-      console.log(data)
-      this.profid=data[0].profileid;
+  this.api.getUserByID(this.userId).subscribe((res:any)=>{
+      
+      this.profid=res.data.profileid;
       sessionStorage.setItem('pid',this.profid)
-      this.name=data[0].name;
-      this.reg_num=data[0].regno;
-      this.branch=data[0].branch;
+      this.name=res.data.name;
+      this.reg_num=res.data.regno;
+      this.branch=res.data.branch;
       
     }
   )

@@ -40,7 +40,8 @@ submitForm(contactform:any){
  else if(res.data.password === contactform.password && res.data.regno === contactform.regno && res.data.role==='student' ){
     this.router.navigate(['/home'])
     console.log("password is correct")
-    sessionStorage.setItem('uid',this.usn)
+  
+    sessionStorage.setItem('uid',contactform.regno)
     sessionStorage.setItem('loggedin','1');
   }
   else{
