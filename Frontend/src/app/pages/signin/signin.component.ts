@@ -34,7 +34,7 @@ submitForm(contactform:any){
  
   this.apiservice.getUserByID(contactform.regno).subscribe(res=>{
     console.log(res.data.name)
- if(contactform.regno==res.data.regno && contactform.password==res.data.password){
+ if(contactform.regno === res.data.regno && contactform.password===res.data.password){
   this.router.navigate(['/admin']);
 }
  else if(res.data.password === contactform.password && res.data.regno === contactform.regno){
