@@ -10,14 +10,14 @@ import { AdminComponent } from '../admin/admin.component';
   selector: 'app-manageblogs',
   standalone: true,
   imports: [NgFor,RouterOutlet,AdminComponent],
-  templateUrl: './manageblogs.component.html',
-  styleUrl: './manageblogs.component.css'
+  templateUrl: './manageblogsadmin.component.html',
+  styleUrl: './manageblogsadmin.component.css'
 })
-export class ManageblogsComponent {
+export class ManageblogsComponentAdmin {
   id:any;
   res:any;
   cent:string="center";
-  constructor(private route:ActivatedRoute,private api:ApiserviceService,private messageService: MessageService){}
+  constructor(private route:ActivatedRoute,private api:ApiserviceService){}
  ngOnInit(): void {
   this.loadData()
  }
@@ -27,6 +27,7 @@ export class ManageblogsComponent {
    this.api.getblog().subscribe(data=>{
     console.log(data)
     this.res=data;
+    console.log(this.res.data)
    })
  }
 
@@ -34,7 +35,7 @@ export class ManageblogsComponent {
 
  deleteBlog(id1:number){
   console.log(id1)
-  this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Blog deleted' });
+  
 
   return this.api.deletePostById(id1)
   
