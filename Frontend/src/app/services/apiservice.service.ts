@@ -28,7 +28,7 @@ export class ApiserviceService {
   getUserByID(Rno: string): Observable<any> {
     console.log('Requesting user with ID:', Rno);
     const res = this.http.get<any>('http://localhost:3000/profile-controller/' + Rno);
-    res.subscribe(data => console.log('Response:', data)); // Logs the actual response
+    res.subscribe(data => console.log('Response:', data)); 
     return res;
 }
 
