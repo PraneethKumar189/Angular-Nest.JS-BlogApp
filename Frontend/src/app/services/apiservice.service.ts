@@ -44,4 +44,9 @@ export class ApiserviceService {
       error: err => console.error('Error:', err),
     });
   }
+  registerUser(user:any){
+    console.log(user)
+    return this.http.post('http://localhost:3000//profile-controller/register',user,{
+      headers: { 'Content-Type': 'application/json' }})
+}
 }

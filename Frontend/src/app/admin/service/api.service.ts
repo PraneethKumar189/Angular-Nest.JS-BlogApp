@@ -10,7 +10,7 @@ export class ApiService {
 
   registerUser(user:any){
     console.log(user)
-    return this.http.post('http://localhost:3000/profile-controller/register',user,{
+    return this.http.post('http://localhost:3000//profile-controller/register',user,{
       headers: { 'Content-Type': 'application/json' }})
 }
 }
