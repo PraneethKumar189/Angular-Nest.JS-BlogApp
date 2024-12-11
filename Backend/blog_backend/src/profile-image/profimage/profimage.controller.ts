@@ -1,6 +1,7 @@
 import { Body, Controller, Post, UploadedFile, UseInterceptors } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { diskStorage } from 'multer';
+
 import { extname } from 'path';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
@@ -30,12 +31,12 @@ export class ProfimageController {
       )
       async uploadFile(
         @UploadedFile() file: Express.Multer.File,
-        @Body('regNo') regNo: string, // Accept registration number
+        @Body('regNo') regNo: string, 
       ) {
-        const baseUrl = `http://localhost:3000`; // Adjust base URL for production
+        const baseUrl = `http://localhost:3000`; 
         const filePath = `${baseUrl}/uploads/${file.filename}`;
     
-        // Save image metadata along with regNo
+    
         const image = this.imageRepository.create({
           regNo,
           filename: file.filename,

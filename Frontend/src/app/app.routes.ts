@@ -15,6 +15,7 @@ import { AddUserComponent } from './admin/add-user/add-user.component';
 import { UpdateUserComponent } from './admin/update-user/update-user.component';
 import { DeleteUserComponent } from './admin/delete-user/delete-user.component';
 import { ManageblogsComponentAdmin } from './admin/manageblogs/manageblogsadmin.component';
+import { UploadimageComponent } from './admin/uploadimage/uploadimage.component';
 
 export const routes: Routes = [
   {path:'',redirectTo:'/signin', pathMatch:'full'},
@@ -32,4 +33,5 @@ export const routes: Routes = [
 {path:'adduser',component:AddUserComponent/*canActivate:[AuthGaurd] */},
 {path:'updateuser',component:UpdateUserComponent/*,canActivate:[AuthGaurd]*/},
 {path:'deleteUser',component:DeleteUserComponent},
-{path:'manageBlog',component:ManageblogsComponentAdmin}];
+{path:'manageBlog',component:ManageblogsComponentAdmin},
+{path:'addimg',component:UploadimageComponent}];
