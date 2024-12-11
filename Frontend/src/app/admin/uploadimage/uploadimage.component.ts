@@ -34,7 +34,7 @@ export class UploadimageComponent {
       formData.append('regNo', this.uploadForm.get('regNo')?.value);
       formData.append('file', this.selectedFile);
 
-      this.http.post('http://localhost:3000/images', formData).subscribe({
+      this.http.post('http://localhost:3000/profimage', formData).subscribe({
         next: (response) => {
           console.log('Upload successful', response);
         },
