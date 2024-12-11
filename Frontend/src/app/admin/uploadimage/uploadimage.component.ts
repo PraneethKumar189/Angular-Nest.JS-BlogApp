@@ -17,7 +17,7 @@ export class UploadimageComponent {
 
   constructor(private fb: FormBuilder, private http: HttpClient) {
     this.uploadForm = this.fb.group({
-      regNo: [''], // Registration number
+      regNo: [''], 
     });
   }
 

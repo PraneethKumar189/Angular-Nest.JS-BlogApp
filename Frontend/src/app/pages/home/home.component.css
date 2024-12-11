@@ -4,12 +4,13 @@ section{
      height: 60vw;
      display: flex;
      flex-direction: row;
+     
     
  }
  #pic {
     
-     width: 50vw; /* This is correct if you want the width to be 50% of the viewport width */
-     height: 60vw; /* Set a height to ensure the image covers the area properly. You can adjust this as per your need */
+     width: 50vw;
+     height: 60vw;
     display: flex;
     justify-content: flex-end;
     
