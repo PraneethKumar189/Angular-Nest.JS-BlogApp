@@ -21,6 +21,7 @@ name:string='';
 reg_num:string='';
 branch:string='';
 profid:any=0;
+info:any
 ngOnInit(): void {
   this.userId =sessionStorage.getItem('uid')
   this.api.getUserByID(this.userId).subscribe((res:any)=>{
@@ -33,7 +34,11 @@ ngOnInit(): void {
       
     }
   )
-
+  
+this.api.getImageUrlById(this.userId).subscribe((data:any)=>{
+  console.log(data)
+  this.info=data;
+})
 
 }
 logout(){

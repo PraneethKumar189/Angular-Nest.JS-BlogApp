@@ -6,6 +6,8 @@ import { ProfileModule } from './profile/profile.module';
 import { BlogsModule } from './blogs/blogs.module';
 
 import { ProfileImageModule } from './profile-image/profile-image.module';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
 @Module({
   imports: [TypeOrmModule.forRoot({
     type: 'postgres',
@@ -16,7 +18,10 @@ import { ProfileImageModule } from './profile-image/profile-image.module';
     database: 'intern7',
     entities: [__dirname + '/**/*.entity{.ts,.js}'],
     synchronize: true,
-  }), ProfileModule,BlogsModule, ProfileImageModule],
+  }), ProfileModule,BlogsModule, ProfileImageModule, ServeStaticModule.forRoot({
+    rootPath: join(__dirname, '..', 'uploads'),
+    serveRoot: '/uploads', 
+  }),],
   controllers: [AppController],
   providers: [AppService],
 })

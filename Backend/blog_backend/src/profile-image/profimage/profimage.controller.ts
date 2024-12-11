@@ -1,4 +1,4 @@
-import { Body, Controller, Post, UploadedFile, UseInterceptors } from '@nestjs/common';
+import { Body, Controller, Get, NotFoundException, Param, Post, UploadedFile, UseInterceptors } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { diskStorage } from 'multer';
 
@@ -6,6 +6,7 @@ import { extname } from 'path';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Image } from './entities/profImage.entity';
+import { identity } from 'rxjs';
 
 @Controller('profimage')
 export class ProfimageController {
@@ -46,4 +47,24 @@ export class ProfimageController {
     
         return { regNo, filename: image.filename, path: filePath };
       }
+
+      @Get(':id1')
+      async getImageById(@Param('id1') id1: string) {
+        const imageRecord = await this.imageRepository.findOne({
+          where: { regNo: id1 }, 
+        });
+      
+        if (!imageRecord) {
+          throw new NotFoundException(`Image with ID ${id1} not found`);
+        }
+      
+        return {
+          imageUrl: imageRecord.filepath,
+        };
+      }
+      
+
+
 }
+
+

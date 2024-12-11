@@ -49,4 +49,8 @@ export class ApiserviceService {
     return this.http.post('http://localhost:3000//profile-controller/register',user,{
       headers: { 'Content-Type': 'application/json' }})
 }
+getImageUrlById(id: string) {
+  console.log(id)
+  return this.http.get<{ imageUrl: string }>(  `http://localhost:3000/profimage/${id}`);
+}
 }

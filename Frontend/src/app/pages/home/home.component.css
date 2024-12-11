@@ -44,7 +44,7 @@ section{
      height: 40px;
      width: 120px;
      margin-top: 50px;
-     background-color:rgb(13, 228, 120);
+     background-color:rgb(13, 178, 228);
      color: rgb(15, 15, 15);
      margin-left: 60px;
      border-radius: 40px;
@@ -54,5 +54,5 @@ section{
      color: black;
  }
  #hero button:hover{
-     background-color:rgb(4, 255, 130)
+     background-color:rgb(4, 226, 255)
  }

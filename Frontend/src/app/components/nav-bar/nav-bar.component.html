@@ -22,13 +22,20 @@
 
 <p-sidebar [(visible)]="sidebarVisible2" position="right">
   <div id="side">
-    <h3>{{name}}</h3>
-    <h4>Reg.No :{{reg_num}}</h4>
-    <h4>Branch :{{branch}}</h4>
+    <img [src]="info.imageUrl" alt="">
+    <ul class="sidebar-list">
+      <li class="sidebar-list-item"> <h3>{{name}}</h3></li>
+      <li class="sidebar-list-item"> <h4>Reg.No :{{reg_num}}</h4></li>
+      <li class="sidebar-list-item"><h4>Branch :{{branch}}</h4></li>
+
+<li class="sidebar-list-item"> <a (click)="nav(profid)">My Blogs</a></li>
+      <li class="sidebar-list-item"><a routerLink="/" routerLinkActive="active">Log Out</a></li>
+    </ul>
+    
+   
+   
+    
   </div>  
-  <div id="side-button">
-    <button id="button" (click)="nav(profid)">My Blogs</button>
-    <button id="button" (click)="logout()">Sign Out-></button>
-  </div> 
+
 </p-sidebar>
 <router-outlet></router-outlet>
