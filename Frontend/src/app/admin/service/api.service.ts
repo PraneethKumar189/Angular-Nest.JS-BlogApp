@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { response } from 'express';
+import { catchError, Observable, tap, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -42,17 +43,19 @@ DeleteUse(id:any){
  
 
 }
-UpdateUser(id:any,data:any){
-  return this.http.put('http://localhost:300/profile-controller/'+id,data).subscribe({
-    next:(response)=>{
-      console.log('User updated successfully:',response);
-      alert('User updated successfully');
-    },
-    error:(err)=>{
-      console.error('Error updating user',err);
-      alert("Failed to update user")
-    }
-  })
-    
+UpdateUser(id: any, data: any): Observable<any> {
+  const url = `http://localhost:3000/profile-controller/${id}`;
+  console.log(`Updating user with ID: ${id}`, data);
+  console.log(url);
+  return this.http.put(url, data).pipe(
+    tap((response) => {
+      console.log('User updated successfully:', response);
+    }),
+    catchError((err) => {
+      console.error('Error updating user:', err);
+      return throwError(() => new Error('Failed to update user'));
+    })
+  );
 }
+
 }

@@ -56,3 +56,9 @@ section{
  #hero button:hover{
      background-color:rgb(4, 226, 255)
  }
+ #img-container{
+  width: 50vw;
+  height: 60vw;
+  padding-left: 17.75%;
+    
+ }
