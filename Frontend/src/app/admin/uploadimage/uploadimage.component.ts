@@ -3,11 +3,12 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
+import { AdminComponent } from "../admin/admin.component";
 
 @Component({
   selector: 'app-uploadimage',
   standalone: true,
-  imports: [ReactiveFormsModule,RouterOutlet],
+  imports: [ReactiveFormsModule, RouterOutlet, AdminComponent],
   templateUrl: './uploadimage.component.html',
   styleUrl: './uploadimage.component.css'
 })

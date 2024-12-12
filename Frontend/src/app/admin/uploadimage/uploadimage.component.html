@@ -1,7 +1,13 @@
-<form [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
-    <input type="text" formControlName="regNo" placeholder="Enter Registration Number" />
-    <input type="file" (change)="onFileSelected($event)" />
-    <button type="submit">Upload</button>
-  </form>
+<app-admin></app-admin>
+<div id="container">
+  <div id="inner-container">
+    <form [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
+      <input type="text" formControlName="regNo" placeholder="Enter Registration Number" />
+      <input id="up" type="file" (change)="onFileSelected($event)" />
+      <button type="submit">Upload</button>
+    </form>
+  </div>
+ 
   
+</div>
   <router-outlet></router-outlet>
